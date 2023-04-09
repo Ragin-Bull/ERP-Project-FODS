@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block PageTitle %}
+{{courseName|title}}
+{% endblock PageTitle %}
+
+{% block content %}
+{% comment %} {% include 'erpApp/includes/navbar.html' %} {% endcomment %}
+<div>
+    <h1>{{courseName}}</h1>
+    <p>Credits:{{courseCredits}}</p>
+</div>
+<div>
+    <p>{{courseDetail}}</p>
+</div>
+{% endblock content %}

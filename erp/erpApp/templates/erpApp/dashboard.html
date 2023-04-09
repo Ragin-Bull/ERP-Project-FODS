@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block PageTitle %}
+    {{dashboard|title}}
+{% endblock PageTitle %}
+
+{% block content %}
+    {% comment %} {% include 'erpApp/includes/navbar.html' %} {% endcomment %}
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Semester</th>
+                    <th scope="col">SGPA</th>
+                    <th scope="col">TotalCredits</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for info in infoList %}
+                    <tr>
+                        <th scope="row"><a href="{% url 'dashboard' user.student.rollNo info.sem%}">{{info.sem}}</a></th>
+                        <td>{{info.sgpa}}</th>
+                        <td>{{info.totalCredits}}</th>
+                    </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="container-fluid">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">CGPA</th>
+                    <th scope="col">Total Credits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{cgpa}}</th>
+                    <td>{{totalCredit}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

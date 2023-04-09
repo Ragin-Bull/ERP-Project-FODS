@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block PageTitle %}
+    {{deptName|title}}
+{% endblock PageTitle %}
+
+{% block content %}
+    {% comment %} {% include 'erpApp/includes/navbar.html' %} {% endcomment %}
+    <div>
+        <ul>
+            {% for course in courseList %}
+                <li><a href="{% url 'course' course%}">{{course}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}

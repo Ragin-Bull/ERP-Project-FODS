@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%block PageTitle%}
+User Registration
+{% endblock %}
+{% block content %}
+{% comment %} {% include 'includes/navbar.html' %} {% endcomment %}
+<hr>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Register</button>
+</form>
+{%endblock%}
