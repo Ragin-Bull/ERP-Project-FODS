@@ -13,9 +13,9 @@ source env/bin/activate
 ```
 env\Scripts\activate.bat
 ```
-## git clone the link [erpProject](https://github.com/Arup20MA20010/erpSourceProject.git)
+## git clone the link [erpProject](https://github.com/RaginBull/erpSourceProject.git)
 ```
-git clone https://github.com/Arup20MA20010erpSourceProject.git
+git clone https://github.com/RaginBullerpSourceProject.git
 ```
 ## Move to the directory erpSourceProject
 ```
